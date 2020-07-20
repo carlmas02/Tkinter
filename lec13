@@ -1,0 +1,19 @@
+rom tkinter import *
+root = Tk()
+
+canvas_width = 800
+canvas_height = 400
+
+root.geometry(f"{canvas_width}x{canvas_height}")
+
+can_widget = Canvas(root, width = canvas_width, height = canvas_height , bg ="navajo white" )
+can_widget.pack()
+
+#line goes from x1,y1 to x2,y2
+#can_widget.create_line(0,0,800,10)
+
+#to create rectangle specify parameters coord of top left and bottom right
+#can_widget.create_rectangle(10,30,800,400 ,fill = "black")
+
+
+root.mainloop()
