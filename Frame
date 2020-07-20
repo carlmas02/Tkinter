@@ -1,0 +1,28 @@
+from tkinter import *
+
+carl_root = Tk()
+carl_root.geometry("733x334")
+carl_root.title("CARL's WEBSITE")
+
+
+def hi():
+    print("this is a test part1")
+
+def hi1():
+    print("this is a test part2")
+
+frame1 = Frame(carl_root,bg = "black",borderwidth = 6 )
+frame1.pack()
+
+label2 = Label(frame1,text = "MY TEST SOFTWARE", bg = "red" ,font ="comicsans", borderwidth = 6)
+
+button = Button(text = "WELCOME",command = hi )
+button.pack()
+
+button1 = Button(text = "Press Here",command = hi1,borderwidth = 10 )
+button1.pack(side = BOTTOM)
+
+
+label2.pack()
+
+carl_root.mainloop()
