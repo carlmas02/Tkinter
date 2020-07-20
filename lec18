@@ -1,0 +1,34 @@
+from tkinter import *
+import tkinter.messagebox as tmsg
+
+root = Tk()
+root.geometry("500x400")
+
+def myfunc():
+    a = tmsg.askyesno("close ", "are you sure?")
+    if a == True:
+        root.destroy()
+    else :
+        pass
+
+
+
+#use this for non dropdown window
+#men = Menu(root)
+#men.add_command(label = "File", command = myfunc)
+#men.add_command(label = "Exit", command = quit )
+#root.config(menu = men)
+
+filemenu = Menu(root)
+m1 = Menu(filemenu, tearoff = 0)
+m1.add_command(label = "Save", command = quit)
+m1.add_separator()
+m1.add_command(label = "Quit", command = myfunc)
+root.config(menu = filemenu)
+
+filemenu.add_cascade(label = "File" , menu = m1)
+
+
+
+
+root.mainloop()
